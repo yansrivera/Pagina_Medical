@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deberes</title>
+  <link rel="stylesheet" href="estilos_salas.css" />
+</head>
+<body>
+  <div class="contenedor-sala">
+    <h1>BY: YANS RIVERA</h1>
+    <a href="bienvenida.html" class="btn-volver">Volver al inicio</a>
+    <h1 class="titulo">Haz clic en una bolita para conocer tus deberes</h1>
+  </div>
+
+  <div class="fondo-texto">¡Cuida tu salud y la de los demás con responsabilidad!</div>
+
+  <div class="sala" id="salaDeberes" style="position:relative; width:100vw; height:calc(100vh - 120px); overflow:hidden;">
+    <div class="bolita" data-mensaje="Cumplir con las normas establecidas en el centro de salud."></div>
+    <div class="bolita" data-mensaje="Respetar al personal médico y administrativo."></div>
+    <div class="bolita" data-mensaje="Proporcionar información veraz sobre su estado de salud."></div>
+    <div class="bolita" data-mensaje="Cuidar las instalaciones y recursos del centro de salud."></div>
+    <div class="bolita" data-mensaje="Seguir las indicaciones médicas y tratamientos prescritos."></div>
+    <div class="bolita" data-mensaje="Informar oportunamente sobre cambios en su estado de salud."></div>
+    <div class="bolita" data-mensaje="Respetar los derechos de otros pacientes."></div>
+    <div class="bolita" data-mensaje="Cumplir con los horarios establecidos para citas y procedimientos."></div>
+    <div class="bolita" data-mensaje="Evitar conductas que pongan en riesgo la seguridad de otros."></div>
+    <div class="bolita" data-mensaje="Participar activamente en su proceso de recuperación."></div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <p id="textoModal">
+        <span id="mensajeIntro"></span><br />
+        <span id="mensajeDeber"></span>
+      </p>
+      <button id="cerrar">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    const sala = document.getElementById('salaDeberes');
+    const salaRect = () => sala.getBoundingClientRect();
+
+    document.querySelectorAll('.bolita').forEach(bolita => {
+      const size = bolita.offsetWidth || 54;
+
+      bolita.style.left = Math.random() * (sala.clientWidth - size) + 'px';
+      bolita.style.top = Math.random() * (sala.clientHeight - size) + 'px';
+
+      let dx = (Math.random() - 0.5) * 9;
+      let dy = (Math.random() - 0.5) * 9;
+
+      function mover() {
+        let x = parseFloat(bolita.style.left);
+        let y = parseFloat(bolita.style.top);
+
+        x += dx;
+        y += dy;
+
+        if (x <= 0 || x >= sala.clientWidth - size) dx *= -1;
+        if (y <= 0 || y >= sala.clientHeight - size) dy *= -1;
+
+        bolita.style.left = x + 'px';
+        bolita.style.top = y + 'px';
+
+        requestAnimationFrame(mover);
+      }
+
+      mover();
+
+      bolita.addEventListener('click', () => {
+        const mensaje = bolita.getAttribute('data-mensaje');
+        document.getElementById('mensajeIntro').textContent = "Tienes el deber de:";
+        document.getElementById('mensajeDeber').textContent = mensaje;
+        document.getElementById('modal').style.display = 'flex';
+      });
+    });
+
+    document.getElementById('cerrar').addEventListener('click', () => {
+      document.getElementById('modal').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

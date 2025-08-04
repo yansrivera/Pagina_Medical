@@ -1,0 +1,374 @@
+html {
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+/* Fondo de la pagina */
+body {
+    justify-content: center;
+    align-items: center;
+    background: url('./assents/fondome.png') no-repeat;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+
+/* Intro de logo */
+.intro {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background:url('./assents/logome.png') no-repeat center center;
+    background-color: #070707;
+    background-size:cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1s ease-in-out 1s forwards;
+}
+
+.intro-logo {
+    width: 160px;
+    animation: fadeIn 1s ease-out;
+}
+
+
+/* wrapper input-box index*/
+.wrapper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  animation: showLogin 0.5s ease-in-out 0.2s forwards;
+  position: relative;
+  margin: auto;
+  width: 45rem;
+  background: rgba(255, 255, 255, 1);
+  padding: 2rem 2.5rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 15px rgba(4, 248, 146, 0.953);
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-box select {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0.125rem solid rgba(38, 38, 38, 0.2);
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  border-radius: 2.5rem;
+  max-width: 80%;
+  padding: 0 1.875rem;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.wrapper h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top:  0.8rem 0 0.5rem;;
+    line-height: 1.8rem;
+}
+
+.wrapper p {
+  font-size: 0.85rem;
+  color: #444343;
+  margin-bottom: 0.5rem;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0.125rem solid rgba(38, 38, 38, 0.2);
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    border-radius: 2.5rem;
+    max-width: 80%;
+    padding: 0 1.875rem;
+
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 6rem;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.remember-Password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #000;
+  margin-bottom: 1.3rem;
+  width: 75%; 
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+
+.btn {
+  width: 50%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 2rem;
+  background: rgba(14, 138, 86, 0.953);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+.register-link {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.register-link a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.register-link a:hover { 
+    color: orange; 
+}
+
+.help-text {
+ font-size: 0.68rem;
+ color: #444343;
+ margin-bottom: 0.5rem;
+}
+
+/* Intro de logo 2 */
+.intro {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background:url('./assents/fondome.png') no-repeat center center;
+    background-color: #070707;
+    background-size:cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1s ease-in-out 4s forwards;
+}
+
+.intro-logo {
+  width: 160px;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out 1s forwards;
+}
+
+/* wrapper bienvenida */
+.wrapper2 {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 1000;
+  animation: hideLogin 1s ease-in-out 2s forwards;
+  position: relative;
+  margin: auto;
+  width: 45rem;
+  background: rgba(255, 255, 255, 1);
+  padding: 2rem 2.5rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 15px rgba(248, 126, 4, 0.953);
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.wrapper2 h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top:  0.8rem 0 0.5rem;;
+    line-height: 1.7rem;
+}
+
+.wrapper2 h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top:  0.8rem 0 0.5rem;;
+    line-height: 3.5rem;
+}
+    
+.wrapper2 p {
+  font-size: 0.85rem;
+  color: #444343;
+  margin-bottom: 0.5rem;
+}
+
+.text{
+  font-size: 0.85rem;
+  color: #444343;
+  margin-bottom: 0.5rem;
+}
+.mostrarDatosBtn,
+.ocultarDatosBtn {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  background-color: #2b7cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.mostrarDatosBtn:hover,
+.ocultarDatosBtn:hover {
+  background-color: #1a5edb;
+}
+
+.ocultarDatosBtn {
+  background-color: #ff5757;
+}
+
+.ocultarDatosBtn:hover {
+  background-color: #d93737;
+}
+
+/* Responsive para tablets */
+
+@media (max-width: 992px) {
+  .wrapper, .wrapper2 {
+    width: 80%;
+    padding: 1.5rem;
+  }
+  
+  .input-box i {
+    right: 4rem;
+  }
+}
+
+/* Responsive para telefonos */
+@media (max-width: 768px) {
+  .wrapper, .wrapper2 {
+    width: 90%;
+    padding: 1.2rem;
+    border-radius: 2rem;
+  }
+  
+  .logo img {
+    width: 70px;
+  }
+  
+  .input-box {
+    height: 2.8rem;
+  }
+  
+  .input-box i {
+    right: 3rem;
+  }
+  
+  .btn {
+    width: 70%;
+    padding: 0.7rem;
+  }
+}
+
+/* Animaciones index */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes showLogin {
+  to {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+/* Animaciones bienvenida */
+
+@keyframes hideLogin {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.iniciar-sesion-container {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #444343;
+}
+.btn-eliminar {
+  margin-top: 5px;
+  padding: 5px 12px;
+  background-color: #ff5757;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #d93737;
+}
+
+.btn-login {
+  width: 50%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 2rem;
+  background: #2b7cff; /* Azul brillante */
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background: #1a5edb; /* Azul más oscuro */
+}

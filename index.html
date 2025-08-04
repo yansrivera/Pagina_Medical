@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KARIO Media</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    <img src="./assents/logoome.png" alt="KARIO Logo" class="intro-logo" />
+  </div>
+
+  <div class="wrapper">
+    <form action="bienvenida.html" method="GET">
+      <div class="logo">
+        <img src="./assents/logome.png" alt="Logo" width="90" />
+        <p>M E D I C A L</p>
+      </div>
+      
+      <h2>Bienvenidos a <br> MEDICAL DUARTE </h2> 
+      <br>
+      <p>Por favor ingrese los siguientes datos para ingresar a la plataforma</p>
+
+      <div class="input-box">
+        <input type="text" name="usuario" placeholder="Usuario" required>
+        <i class="bx bxs-user"></i>
+      </div>
+      
+      <div class="input-box">
+        <label for="documento" placeholder="tipo de documento"></label>
+        <select id="tipoDocumento" name="tipoDocumento">
+          <option value="ti">T.I</option>
+          <option value="cc">C.C</option>
+        </select>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="numeroDocumento" name="numeroDocumento" placeholder="# Documento" required>
+        <i class="bx bxs-id-card"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" name="habitacion" placeholder="Habitación" required>
+        <i class="bx bxs-hotel"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" name="servicio" placeholder="Servicio" required>
+        <i class="bx bxs-briefcase"></i>
+      </div>
+
+
+      <button type="submit" class="btn">Ingresar al panel</button>
+
+      <br><br>
+
+      <div class="help-text">
+        ¿Tienes problemas para ingresar? Por favor contacta con asistencia técnica lo más pronto posible.
+      </div>
+    </form>
+<br><br>
+<button class="mostrarDatosBtn" id="mostrarDatosBtn">Mostrar datos</button>
+<button class="ocultarDatosBtn" id="ocultarDatosBtn" style="display: none;">Ocultar datos</button>
+
+<div id="lista-ingresos" style="display: none; margin-top: 20px; border: 1px solid #ccc; padding: 10px;">
+  <h3>Usuarios que han ingresado:</h3>
+  <ul id="ingresos-ul"></ul>
+</div>
+<div class="iniciar-sesion-container">
+  <p>¿Ya tienes cuenta?</p>
+  <a href="login.html">
+    <button type="button" class="btn-login">Iniciar sesión</button>
+  </a>
+</div>
+
+
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

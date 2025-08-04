@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #d4f1f9, #fce4ec);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+/* Evitar el scroll horizontal */
+html{
+  overflow-x: hidden;
+}
+
+/* Texto bonito centrado */
+.fondo-texto {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+  opacity: 0.32;
+  pointer-events: none;
+  user-select: none;
+  width: 90vw;
+  max-width: 1000px;
+  background: linear-gradient(90deg, #ff6f91, #f9d423, #43e97b, #38f9d7, #4fc3f7, #a259c6, #ff6f91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: brightness(1.1) drop-shadow(0 2px 8px #fff);
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  letter-spacing: 2px;
+}
+
+/* Contenedor título y botón */
+.contenedor-sala {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+  padding: 18px 0 10px 0;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 18px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.titulo {
+  font-size: 1.6rem;
+  color: #2d5c88;
+  margin: 0.5rem 0 0 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Botón volver */
+.btn-volver {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #4fc3f7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 8px;
+  margin-top: 0;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  position: absolute;
+  left: 24px;
+  top: 18px;
+}
+.btn-volver:hover {
+  background-color: #0288d1;
+}
+
+/* Bolitas de colores variados y efecto brillante */
+.bolita {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: 0 0 18px 2px #fff, 0 0 0 4px #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #fff;
+  background: linear-gradient(135deg, #ffaf7b 0%, #d76d77 100%);
+}
+.bolita:nth-child(2) { background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);}
+.bolita:nth-child(3) { background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);}
+.bolita:nth-child(4) { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);}
+.bolita:nth-child(5) { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);}
+.bolita:nth-child(6) { background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);}
+.bolita:nth-child(7) { background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);}
+.bolita:nth-child(8) { background: linear-gradient(135deg, #fd6e6a 0%, #ffc600 100%);}
+.bolita:nth-child(9) { background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);}
+.bolita:nth-child(10) { background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%);}
+.bolita:hover {
+  transform: scale(1.22) rotate(-8deg);
+  box-shadow: 0 0 32px 8px #fff, 0 0 40px 0px #ffd200;
+  filter: brightness(1.2);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content, .modal-contenido {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.modal-content button,
+.modal-contenido button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.modal-content button:hover,
+.modal-contenido button:hover {
+  background-color: #ff3c6f;
+}
+
+.sala {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 120px); /* Ajusta según el alto de tu header */
+  overflow: hidden; /* ¡Esto es clave! */
+}

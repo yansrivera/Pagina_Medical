@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión - MEDICAL DUARTE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <div class="intro">
+    <img src="./assents/logoome.png" alt="KARIO Logo" class="intro-logo" />
+  </div>
+
+  <div class="wrapper">
+    <form action="bienvenida.html" method="GET">
+      <div class="logo">
+        <img src="./assents/logome.png" alt="Logo" width="90" />
+        <p>M E D I C A L</p>
+      </div>
+
+      <h2>Iniciar sesión</h2>
+      <p>Por favor ingresa tus datos</p>
+
+      <!-- Usuario -->
+      <div class="input-box">
+        <input type="text" name="usuario" placeholder="Usuario" required>
+        <i class="bx bxs-user"></i>
+      </div>
+
+      <!-- Número de Documento -->
+      <div class="input-box">
+        <input type="text" name="numeroDocumento" placeholder="# Documento" required>
+        <i class="bx bxs-id-card"></i>
+      </div>
+
+      <button type="submit" class="btn">Ingresar</button>
+
+      <div class="iniciar-sesion-container">
+        <p>¿No tienes una cuenta?</p>
+        <a href="index.html">
+          <button type="button" class="btn-login">Registrarse</button>
+        </a>
+      </div>
+    </form>
+  </div>
+<script src="scripts.js"></script>
+
+</body>
+</html>

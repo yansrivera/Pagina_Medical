@@ -1,0 +1,340 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff;
+    margin: 0;
+    color: #333;
+}
+
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    height: 68px;
+}
+
+.marco {
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+    color: #020100;
+    font-size: 12px;
+}
+
+.marco .estructura{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.marco p{
+    margin: 0 0 0 3px;
+    font-weight: 500;
+    color: #0b0b0b;
+}
+
+.marco-icono img {
+    height: 50px;
+    margin: 0 18px;
+}
+
+.iconos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconos img {
+    height: 28px;
+    border-radius: 50%;
+}
+
+.iconos .imagen {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.mini-menu {
+  position: fixed;
+  top: 60px;
+  right: -160px;
+  width: 150px;
+  background: transparent;
+  border-left: transparent;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: right 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.mini-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;     
+  color: #222;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.mini-menu a:hover {
+  background: #eee;
+}
+
+.mini-menu a img {
+  width: 18px;
+  height: 18px;
+}
+
+#menu-toggle:checked ~ .mini-menu {
+  right: 0;
+}
+
+
+h1 {
+    text-align: center;
+    color: #222;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 22px 0 0 0;
+    letter-spacing: .03em;
+}
+
+p {
+    text-align: center;
+    color: #000000;
+    font-size: 1.08em;
+    margin-top: 8px;
+}
+
+.table {
+    width: 90%;
+    margin: 20px auto 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 16px;
+    font-size: 1em;
+}
+
+.table thead th {
+ padding: 14px 16px;
+    border: none;
+    font-size: 1em;
+    color: #222;
+    vertical-align: middl
+}
+
+.table tbody tr {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1.5px #ddd;
+    overflow: hidden;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+}
+
+.table tbody td {
+    padding: 14px 16px;
+    border: none;
+    font-size: 1em;
+    color: #222;
+    vertical-align: middle;
+}
+
+.table tbody tr td:first-child {
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+.table tbody tr td:last-child {
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.menu {
+    height: 28px;
+    cursor: pointer;
+}
+
+.circle {
+    padding: 0;
+    text-align: center;
+}
+
+svg {
+    display: block;
+    margin: auto;
+}
+
+.bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 5;
+}
+
+.progress-1 { /* 31% rojo */
+    fill: none;
+    stroke: #ff2828;
+    stroke-width: 5;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 87;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+.progress-2 { /* 25% rojo */
+    fill: none;
+    stroke: #ff2828;
+    stroke-width: 5;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 94.5;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+.progress-3 { /* 80% verde */
+    fill: none;
+    stroke: #3ad100;
+    stroke-width: 5;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 25.2;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+.progress-4 { /* 32% naranja */
+    fill: none;
+    stroke: #ff9300;
+    stroke-width: 5;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 85.7;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+.progress-5 { /* 95% verde */
+    fill: none;
+    stroke: #3ad100;
+    stroke-width: 5;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 6.3;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+.progress-6 { /* 75% naranja */
+    fill: none;
+    stroke: #ff9300;
+    stroke-width: 5;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 31.5;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.percentage {
+    font-size: 1em;
+    font-weight: 700;
+    fill: #222;
+    text-anchor: middle;
+    alignment-baseline: middle;
+    dominant-baseline: middle;
+}
+
+.boton {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.boton button {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 14px 48px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    transition: background 0.18s;
+}
+
+.boton button:hover {
+    background: #ff8000;
+}
+
+@media (max-width: 1024px) {
+  .encabezado {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+  }
+
+  .marco {
+    flex: 0 1 60%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .marco .estructura {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .marco-icono {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 8px 0;
+  }
+
+  .iconos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .iconos img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .estructura {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .iconos {
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .mini-menu {
+    right: -100%;
+    top: 70px;
+    width: 90%;
+    padding: 12px;
+  }
+
+  #menu-toggle:checked ~ .mini-menu {
+    right: 5%;
+  }
+}
+
